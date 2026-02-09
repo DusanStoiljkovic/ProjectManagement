@@ -29,7 +29,7 @@ const Navbar = () => {
             <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                     <Avatar>
-                        <AvatarImage src="https://github.com/shadcn.png" />
+                        <AvatarImage src="https://avatars.githubusercontent.com/u/72257891" />
                         <AvatarFallback>CN</AvatarFallback>
                     </Avatar>
                 </DropdownMenuTrigger>

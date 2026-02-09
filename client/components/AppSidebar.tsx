@@ -35,6 +35,8 @@ import {
   ChevronDown,
   Plus,
   Projector,
+  CreditCard,
+  User,
 } from "lucide-react"
 
 import Link from "next/link"
@@ -42,9 +44,8 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "./ui/collap
 
 const projects = [
   { title: "Home", url: "/", icon: Home },
-  { title: "Inbox", url: "#", icon: Inbox },
-  { title: "Calendar", url: "#", icon: Calendar },
-  { title: "Search", url: "#", icon: Search },
+  { title: "Profile", url: "/users/Dusan", icon: User },
+  { title: "Payments", url: "/payments", icon: CreditCard },
 ]
 
 export function AppSidebar() {
@@ -59,12 +60,12 @@ export function AppSidebar() {
               <DropdownMenuTrigger asChild>
                 <SidebarMenuButton size="lg" className="gap-2">
                   <Avatar className="h-8 w-8">
-                    <AvatarImage src="https://github.com/shadcn.png" />
-                    <AvatarFallback>AC</AvatarFallback>
+                    <AvatarImage src="https://avatars.githubusercontent.com/u/72257891" />
+                    <AvatarFallback>Dusan</AvatarFallback>
                   </Avatar>
 
                   <div className="flex flex-col text-left">
-                    <span className="text-sm font-semibold">Acme Inc</span>
+                    <span className="text-sm font-semibold">Dusan Stoiljkovic</span>
                     <span className="text-xs text-muted-foreground">
                       Workspace
                     </span>
@@ -78,7 +79,7 @@ export function AppSidebar() {
                 align="start"
                 className="w-[--radix-popper-anchor-width]"
               >
-                <DropdownMenuItem>Acme Inc</DropdownMenuItem>
+                <DropdownMenuItem>Dusan Stoiljkovic</DropdownMenuItem>
                 <DropdownMenuItem>Personal</DropdownMenuItem>
                 <DropdownMenuItem>New workspace</DropdownMenuItem>
               </DropdownMenuContent>
