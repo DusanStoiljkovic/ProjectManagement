@@ -29,6 +29,8 @@ import {
 } from "@/components/ui/sheet"
 import { Button } from "@/components/ui/button";
 import EditUser from "@/components/EditUser";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import ChartLine from "@/components/ChartLine";
 
 const SingleUserPage = () => {
     return (
@@ -44,7 +46,7 @@ const SingleUserPage = () => {
                     </BreadcrumbItem>
                     <BreadcrumbSeparator />
                     <BreadcrumbItem>
-                    <BreadcrumbPage>John Doe</BreadcrumbPage>
+                    <BreadcrumbPage>Dusan Stoiljkovic</BreadcrumbPage>
                     </BreadcrumbItem>
                 </BreadcrumbList>
             </Breadcrumb>
@@ -114,15 +116,15 @@ const SingleUserPage = () => {
                                 <Progress value={66}/>
                                 <div className="flex items-center gap-2">
                                     <span className="font-bold">Username:</span>
-                                    <span>jonh.doe</span>
+                                    <span>dusan.stoiljkovic</span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <span className="font-bold">Email:</span>
-                                    <span>jonh.doe@gmail.com</span>
+                                    <span>dusanstoiljkovic@gmail.com</span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <span className="font-bold">Phone:</span>
-                                    <span>+381 51231245</span>
+                                    <span>+381 12121221</span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <span className="font-bold">Location:</span>
@@ -146,9 +148,23 @@ const SingleUserPage = () => {
                 {/* RIGHT */}
                 <div className="w-full xl:w-2/3 space-y-6">
                     {/* USER CARD CONTAINER */}
-                    <div className="bg-primary-foreground p-4 rounded-lg">User Card</div>
+                    <div className="bg-primary-foreground p-4 rounded-lg">
+                        <div className="flex items-center gap-2">
+                            <Avatar className="size-12">
+                                <AvatarImage src="https://avatars.githubusercontent.com/u/72257891"/>
+                                <AvatarFallback>DS</AvatarFallback>
+                            </Avatar>
+                            <h1 className="text-xl font-semibold"> Dusan Stoiljkovic </h1>
+                        </div>
+                        <p className="text-sm text-muted-foreground">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nam error nihil magnam. Officia veniam itaque aliquid rerum neque, et accusantium commodi illo nemo dolorem? Esse in deserunt aliquid officia!
+                        </p>
+                    </div>
                     {/* CHART CONTAINER */}
-                    <div className="bg-primary-foreground p-4 rounded-lg">Chart</div>
+                    <div className="bg-primary-foreground p-4 rounded-lg">
+                        <h1 className="text-xl font-semibold mb-5">User Activity</h1>
+                        <ChartLine/>
+                    </div>
                 </div>
             </div>
         </div>
